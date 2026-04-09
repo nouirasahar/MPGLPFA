@@ -1,0 +1,58 @@
+import type { Service } from "@/types";
+
+export const services: Service[] = [
+  {
+    id: "1",
+    title: "Home Nursing Care",
+    description: "Professional nursing care at your doorstep. IV drips, wound care, injections, and more by certified nurses.",
+    icon: "Heart",
+    price: 150,
+    duration: "1-2 hours",
+    category: "nursing",
+  },
+  {
+    id: "2",
+    title: "Doctor Home Visit",
+    description: "Board-certified doctors visit your home for consultations, examinations, and prescription management.",
+    icon: "Stethoscope",
+    price: 300,
+    duration: "30-60 min",
+    category: "doctor",
+  },
+  {
+    id: "3",
+    title: "Physiotherapy Session",
+    description: "Expert physiotherapists help you recover with personalized rehabilitation programs at home.",
+    icon: "Activity",
+    price: 200,
+    duration: "45-60 min",
+    category: "physiotherapy",
+  },
+  {
+    id: "4",
+    title: "Blood Sample Collection",
+    description: "Certified phlebotomists collect blood samples from your home. Results delivered digitally.",
+    icon: "TestTube",
+    price: 80,
+    duration: "15-30 min",
+    category: "lab",
+  },
+  {
+    id: "5",
+    title: "Post-Surgery Follow-Up",
+    description: "Comprehensive post-operative care including wound management, medication, and recovery monitoring.",
+    icon: "ShieldCheck",
+    price: 250,
+    duration: "1-2 hours",
+    category: "postop",
+  },
+  {
+    id: "6",
+    title: "Elderly Care Package",
+    description: "Dedicated care for elderly family members including vitals monitoring, medication management, and companionship.",
+    icon: "Heart",
+    price: 350,
+    duration: "4 hours",
+    category: "nursing",
+  },
+];
