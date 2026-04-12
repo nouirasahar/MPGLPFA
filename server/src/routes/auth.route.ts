@@ -1,24 +1,27 @@
 import { Hono } from 'hono'
 import bcrypt from 'bcryptjs'
 import { User } from '../models/user.model'
+import { generateToken } from '../utils/jwt'
 
 const authRoute = new Hono()
 
 authRoute.post('/sign-up', async (c) => {
   try {
     const body = await c.req.json()
-    const { name, email, password, role } = body
+    const { name, email, password, role, governorate } = body
 
-    if (!name || !email || !password) {
+    if (!name || !email || !password || !role || !governorate) {
       return c.json(
-        { message: 'Name, email, and password are required' },
+        {
+          message: 'Name, email, password, role, and governorate are required',
+        },
         400
       )
     }
 
     const normalizedEmail = String(email).toLowerCase().trim()
 
-    const existingUser = await User.findOne({ email: normalizedEmail })
+    const existingUser = await User.findOne({ email: normalizedEmail } as any)
 
     if (existingUser) {
       return c.json({ message: 'User already exists' }, 409)
@@ -30,17 +33,26 @@ authRoute.post('/sign-up', async (c) => {
       name: String(name).trim(),
       email: normalizedEmail,
       password: hashedPassword,
-      role: role || 'patient',
+      role,
+      governorate,
+    })
+
+    const token = generateToken({
+      userId: String(newUser._id),
+      email: newUser.email,
+      role: newUser.role,
     })
 
     return c.json(
       {
         message: 'User registered successfully',
+        token,
         user: {
           id: newUser._id,
           name: newUser.name,
           email: newUser.email,
           role: newUser.role,
+          governorate: newUser.governorate,
           isVerified: newUser.isVerified,
         },
       },
@@ -58,10 +70,7 @@ authRoute.post('/sign-in', async (c) => {
     const { email, password } = body
 
     if (!email || !password) {
-      return c.json(
-        { message: 'Email and password are required' },
-        400
-      )
+      return c.json({ message: 'Email and password are required' }, 400)
     }
 
     const normalizedEmail = String(email).toLowerCase().trim()
@@ -78,14 +87,22 @@ authRoute.post('/sign-in', async (c) => {
       return c.json({ message: 'Invalid email or password' }, 401)
     }
 
+    const token = generateToken({
+      userId: String(user._id),
+      email: user.email,
+      role: user.role,
+    })
+
     return c.json(
       {
         message: 'User signed in successfully',
+        token,
         user: {
           id: user._id,
           name: user.name,
           email: user.email,
           role: user.role,
+          governorate: user.governorate,
           isVerified: user.isVerified,
         },
       },

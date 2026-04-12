@@ -7,11 +7,11 @@ import { CnButton } from "@/components/CnButton";
 
 export default function PatientDashboard() {
   const upcoming = sampleBookings.filter((b) => b.status === "upcoming");
-
+const user = JSON.parse(localStorage.getItem("user") || "{}");
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="font-heading text-2xl font-bold text-foreground mb-1">Welcome back, John</h2>
+        <h2 className="font-heading text-2xl font-bold text-foreground mb-1">Welcome back, {user?.name || "User"}</h2>
         <p className="text-muted-foreground">Here's an overview of your healthcare activity.</p>
       </div>
 

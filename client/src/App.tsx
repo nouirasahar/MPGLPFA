@@ -7,6 +7,8 @@ import { PublicLayout } from "@/layouts/PublicLayout";
 import { AuthLayout } from "@/layouts/AuthLayout";
 import { DashboardLayout } from "@/layouts/DashboardLayout";
 
+import ProtectedRoute from "@/pages/ProtectedRoute";
+
 import HomePage from "@/pages/HomePage";
 import ServicesPage from "@/pages/ServicesPage";
 import ServiceDetailPage from "@/pages/ServiceDetailPage";
@@ -39,7 +41,10 @@ const App = () => (
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/booking" element={<BookingFormPage />} />
-            <Route path="/booking/confirmation" element={<BookingConfirmationPage />} />
+            <Route
+              path="/booking/confirmation"
+              element={<BookingConfirmationPage />}
+            />
           </Route>
 
           {/* Auth routes */}
@@ -48,13 +53,29 @@ const App = () => (
             <Route path="/register" element={<RegisterPage />} />
           </Route>
 
-          {/* Dashboard routes */}
-          <Route element={<DashboardLayout />}>
+          {/* Patient dashboard routes */}
+          <Route
+            element={
+              <ProtectedRoute role="patient">
+                <DashboardLayout />
+              </ProtectedRoute>
+            }
+          >
             <Route path="/dashboard" element={<PatientDashboard />} />
-            <Route path="/pro/dashboard" element={<ProDashboard />} />
             <Route path="/bookings" element={<BookingsPage />} />
             <Route path="/reviews" element={<ReviewsPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+          </Route>
+
+          {/* Professional dashboard routes */}
+          <Route
+            element={
+              <ProtectedRoute role="professional">
+                <DashboardLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route path="/pro/dashboard" element={<ProDashboard />} />
           </Route>
 
           {/* 404 */}
