@@ -7,6 +7,8 @@ import { PublicLayout } from "@/layouts/PublicLayout";
 import { AuthLayout } from "@/layouts/AuthLayout";
 import { DashboardLayout } from "@/layouts/DashboardLayout";
 
+import ChatbotComponent from "@/chatbot/static/ChatbotComponent.jsx";
+
 import HomePage from "@/pages/HomePage";
 import ServicesPage from "@/pages/ServicesPage";
 import ServiceDetailPage from "@/pages/ServiceDetailPage";
@@ -24,11 +26,14 @@ import BookingConfirmationPage from "@/pages/BookingConfirmationPage";
 import NotFoundPage from "@/pages/NotFoundPage";
 
 const queryClient = new QueryClient();
+const hideChatbotOn = ['/login','/register'];
+const shouldShowChatbot = !hideChatbotOn.some(path => location.pathname.startsWith(path));
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Sonner />
+      {shouldShowChatbot && <ChatbotComponent />}
       <BrowserRouter>
         <Routes>
           {/* Public routes */}

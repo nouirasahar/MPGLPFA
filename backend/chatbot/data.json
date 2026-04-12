@@ -1,0 +1,258 @@
+{
+    "greetings": [
+        {
+            "patterns": [
+                "hello",
+                "hi",
+                "hey",
+                "good morning",
+                "good evening",
+                "hell",
+                "Hello",
+                "Bonjour",
+                "bonjour",
+                "How are you?",
+                "What's up"
+            ],
+            "responses": [
+                "Hello! How can I support you today?",
+                "Hi there! I'm here to help you.",
+                "Hey! What would you like to talk about?"
+            ]
+        }
+    ],
+    "gratitude": [
+        {
+            "patterns": [
+                "thank you",
+                "thanks",
+                "thank you very much"
+            ],
+            "responses": [
+                "You're very welcome!",
+                "Glad I could help!",
+                "Anytime, happy to assist."
+            ]
+        }
+    ],
+    "feelings": [
+        {
+            "patterns": [
+                "i feel anxious",
+                "i am overwhelmed",
+                "i am stressed",
+                "i feel upset"
+            ],
+            "responses": [
+                "I'm sorry you're feeling that way. Would you like some breathing exercises or calming activities?",
+                "It's okay to feel overwhelmed or anxious sometimes. I'm here to listen if you want to share more."
+            ]
+        },
+        {
+            "patterns": [
+                "i am happy",
+                "i feel good",
+                "i am calm"
+            ],
+            "responses": [
+                "That's wonderful to hear! Keep enjoying those positive moments.",
+                "Great!"
+            ]
+        }
+    ],
+    "activities": [
+        {
+            "patterns": [
+                "play",
+                "game",
+                "games",
+                "activity",
+                "activities"
+            ],
+            "responses": [
+                "The games designed for autistic kids are available in the Quests section.",
+                "You can find some suggested games on the home page."
+            ]
+        },
+        {
+            "patterns": [
+                "ressources",
+                "articles",
+                "news",
+                "Pdfs",
+                "Books",
+                "daily news"
+            ],
+            "responses": [
+                "The ressources and articles designed to help parents are available in the Ressource section.",
+                "You can find some suggested pdfs and articles on the ressource page."
+            ]
+        }
+    ],
+    "help": [
+        {
+            "patterns": [
+                "i need help",
+                "can you help me",
+                "support",
+                "advice",
+                "What can you do ? ",
+                "What is your job? ",
+                "test"
+            ],
+            "responses": [
+                "I'm here to help. What do you need assistance with today?",
+                "Tell me more about how I can support you.",
+                "yes what can i help you with?"
+            ]
+        }
+    ],
+    "healthcare_definition": [
+        {
+            "patterns": [
+                "what is healthcare",
+                "define healthcare",
+                "explain healthcare",
+                "what does healthcare mean"
+            ],
+            "responses": [
+                "Healthcare refers to the services provided to maintain or improve a person's health, including prevention, diagnosis, treatment, and recovery.",
+                "Healthcare is a system that includes doctors, nurses, hospitals, and services that help people stay healthy and manage illnesses."
+            ]
+        }
+    ],
+    "healthcare_services": [
+        {
+            "patterns": [
+                "what services do you offer",
+                "available healthcare services",
+                "what kind of care can i get",
+                "services"
+            ],
+            "responses": [
+                "We offer a variety of healthcare services including home nursing, doctor consultations, physiotherapy, and lab testing.",
+                "Our services are designed to provide professional healthcare support directly at your home."
+            ]
+        }
+    ],
+    "healthcare_appointments": [
+        {
+            "patterns": [
+                "how to book an appointment",
+                "how can i schedule a visit",
+                "book a doctor",
+                "appointment"
+            ],
+            "responses": [
+                "You can book an appointment by selecting a service, choosing a professional, and picking a time that suits you.",
+                "Scheduling is simple—just browse services, select your preferred provider, and confirm your booking."
+            ]
+        }
+    ],
+    "healthcare_professionals": [
+        {
+            "patterns": [
+                "who are the healthcare providers",
+                "are your professionals certified",
+                "do you have qualified doctors"
+            ],
+            "responses": [
+                "All our healthcare professionals are certified, experienced, and verified to ensure high-quality care.",
+                "We work with licensed doctors, nurses, and specialists who are carefully selected and background-checked."
+            ]
+        }
+    ],
+    "healthcare_pricing": [
+        {
+            "patterns": [
+                "how much does it cost",
+                "price of services",
+                "cost of healthcare",
+                "therapy cost"
+            ],
+            "responses": [
+                "Pricing depends on the type of service and provider. You can view detailed costs when selecting a service.",
+                "Healthcare service costs may vary based on your location and the type of care required."
+            ]
+        }
+    ],
+    "healthcare_emergency": [
+        {
+            "patterns": [
+                "is this for emergencies",
+                "can i use this in emergency",
+                "urgent care"
+            ],
+            "responses": [
+                "Our platform is mainly for scheduled and non-emergency care. For emergencies, please contact local emergency services immediately.",
+                "We recommend calling emergency services for urgent or life-threatening situations."
+            ]
+        }
+    ],
+    "healthcare_prevention": [
+        {
+            "patterns": [
+                "how to stay healthy",
+                "health tips",
+                "prevent illness",
+                "healthy lifestyle"
+            ],
+            "responses": [
+                "Maintaining a balanced diet, exercising regularly, getting enough sleep, and regular check-ups are key to staying healthy.",
+                "Preventive healthcare includes healthy habits, routine screenings, and early medical consultations."
+            ]
+        }
+    ],
+    "healthcare_homecare": [
+        {
+            "patterns": [
+                "what is home healthcare",
+                "home care services",
+                "care at home"
+            ],
+            "responses": [
+                "Home healthcare provides medical services at your home, making care more convenient and comfortable.",
+                "It includes services like nursing care, physiotherapy, and medical monitoring without needing hospital visits."
+            ]
+        }
+    ],
+    "healthcare_trust": [
+        {
+            "patterns": [
+                "is this service reliable",
+                "can i trust this platform",
+                "is it safe"
+            ],
+            "responses": [
+                "Yes, we prioritize patient safety by working only with verified professionals and maintaining high service standards.",
+                "Your safety and satisfaction are our top priorities, and all providers are carefully vetted."
+            ]
+        }
+    ],
+    "healthcare_contact": [
+        {
+            "patterns": [
+                "how can i contact support",
+                "need help",
+                "customer service"
+            ],
+            "responses": [
+                "You can contact our support team through the website for any assistance or inquiries.",
+                "Our support team is here to help you with bookings, services, and any questions you may have."
+            ]
+        }
+    ],
+    "website_about": [
+        {
+            "patterns": [
+                "what is this website",
+                "what do you do",
+                "about this platform"
+            ],
+            "responses": [
+                "This platform connects patients with healthcare professionals for convenient, high-quality care at home.",
+                "We aim to make healthcare accessible, reliable, and easy to book from the comfort of your home."
+            ]
+        }
+    ]
+}
