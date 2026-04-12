@@ -1,7 +1,8 @@
 import { Schema, model, models } from 'mongoose'
 
 export type UserRole = 'patient' | 'professional'
-const tunisianGovernorates = [
+
+export const tunisianGovernorates = [
   'Ariana',
   'Béja',
   'Ben Arous',
@@ -27,6 +28,7 @@ const tunisianGovernorates = [
   'Tunis',
   'Zaghouan',
 ] as const
+
 const userSchema = new Schema(
   {
     name: {
@@ -58,6 +60,14 @@ const userSchema = new Schema(
     isVerified: {
       type: Boolean,
       default: false,
+    },
+    resetPasswordToken: {
+      type: String,
+      default: null,
+    },
+    resetPasswordExpires: {
+      type: Date,
+      default: null,
     },
   },
   {

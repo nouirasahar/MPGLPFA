@@ -131,9 +131,9 @@ export default function LoginPage() {
             />
             Remember me
           </label>
-          <a href="#" className="text-primary hover:underline">
+          <Link to="/forgot-password" className="text-primary hover:underline">
             Forgot password?
-          </a>
+          </Link>
         </div>
 
         {error && <p className="text-sm text-red-500">{error}</p>}
