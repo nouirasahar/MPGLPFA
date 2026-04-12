@@ -7,7 +7,7 @@ import { PublicLayout } from "@/layouts/PublicLayout";
 import { AuthLayout } from "@/layouts/AuthLayout";
 import { DashboardLayout } from "@/layouts/DashboardLayout";
 import ResetPasswordPage from "@/pages/ResetPasswordPage";
-import ProtectedRoute from "@/pages/ProtectedRoute";
+import ProtectedRoute from "@/components/ProtectedRoute";
 import ForgotPasswordPage from "@/pages/ForgotPasswordPage";
 import HomePage from "@/pages/HomePage";
 import ServicesPage from "@/pages/ServicesPage";
