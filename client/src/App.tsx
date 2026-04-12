@@ -9,6 +9,9 @@ import { DashboardLayout } from "@/layouts/DashboardLayout";
 
 import ChatbotComponent from "@/chatbot/static/ChatbotComponent.jsx";
 
+import ResetPasswordPage from "@/pages/ResetPasswordPage";
+import ProtectedRoute from "@/components/ProtectedRoute";
+import ForgotPasswordPage from "@/pages/ForgotPasswordPage";
 import HomePage from "@/pages/HomePage";
 import ServicesPage from "@/pages/ServicesPage";
 import ServiceDetailPage from "@/pages/ServiceDetailPage";
@@ -44,22 +47,43 @@ const App = () => (
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/booking" element={<BookingFormPage />} />
-            <Route path="/booking/confirmation" element={<BookingConfirmationPage />} />
+            <Route
+              path="/booking/confirmation"
+              element={<BookingConfirmationPage />}
+            />
           </Route>
 
           {/* Auth routes */}
           <Route element={<AuthLayout />}>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/reset-password" element={<ResetPasswordPage />} />
+            <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           </Route>
 
-          {/* Dashboard routes */}
-          <Route element={<DashboardLayout />}>
+          {/* Patient dashboard routes */}
+          <Route
+            element={
+              <ProtectedRoute role="patient">
+                <DashboardLayout />
+              </ProtectedRoute>
+            }
+          >
             <Route path="/dashboard" element={<PatientDashboard />} />
-            <Route path="/pro/dashboard" element={<ProDashboard />} />
             <Route path="/bookings" element={<BookingsPage />} />
             <Route path="/reviews" element={<ReviewsPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+          </Route>
+
+          {/* Professional dashboard routes */}
+          <Route
+            element={
+              <ProtectedRoute role="professional">
+                <DashboardLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route path="/pro/dashboard" element={<ProDashboard />} />
           </Route>
 
           {/* 404 */}
