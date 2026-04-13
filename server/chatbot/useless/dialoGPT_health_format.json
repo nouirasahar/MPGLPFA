@@ -1,0 +1,95 @@
+[
+{
+  "dialog": ["Hi", "Hello! How can I help you with your health today?"]
+},
+{
+  "dialog": ["Hey", "Hi there! What health topic would you like to talk about?"]
+},
+{
+  "dialog": ["Hello", "Hello! I'm here to support your health questions."]
+},
+{
+  "dialog": ["Good morning", "Good morning! How are you feeling today?"]
+},
+{
+  "dialog": ["Good evening", "Good evening! How can I assist you?"]
+},
+{
+  "dialog": ["What is health", "Health is a state of complete physical, mental, and social well-being, not just the absence of disease."]
+},
+{
+  "dialog": ["Why is health important", "Good health helps you live longer, feel better, and perform daily activities effectively."]
+},
+{
+  "dialog": ["Common illnesses", "Common illnesses include colds, flu, infections, and chronic conditions like diabetes or hypertension."]
+},
+{
+  "dialog": ["Symptoms of flu", "Common flu symptoms include fever, cough, sore throat, body aches, and fatigue."]
+},
+{
+  "dialog": ["How to stay healthy", "You can stay healthy by eating balanced meals, exercising regularly, sleeping well, and managing stress."]
+},
+{
+  "dialog": ["Healthy diet", "A healthy diet includes fruits, vegetables, whole grains, proteins, and staying hydrated."]
+},
+{
+  "dialog": ["Exercise benefits", "Regular exercise improves heart health, boosts mood, and helps maintain a healthy weight."]
+},
+{
+  "dialog": ["Mental health", "Mental health is just as important as physical health. It includes emotional, psychological, and social well-being."]
+},
+{
+  "dialog": ["I feel stressed", "I'm sorry you're feeling stressed. Would you like some relaxation or breathing techniques?"]
+},
+{
+  "dialog": ["I feel anxious", "It's okay to feel anxious sometimes. I'm here to listen or suggest ways to cope."]
+},
+{
+  "dialog": ["I feel good", "That's great to hear! Keep taking care of yourself."]
+},
+{
+  "dialog": ["I feel sick", "I'm sorry you're not feeling well. Can you describe your symptoms?"]
+},
+{
+  "dialog": ["When to see a doctor", "You should see a doctor if symptoms are severe, persistent, or worsening over time."]
+},
+{
+  "dialog": ["Preventive care", "Preventive care includes regular check-ups, vaccinations, and healthy lifestyle choices."]
+},
+{
+  "dialog": ["Vaccines", "Vaccines help protect you from serious diseases by strengthening your immune system."]
+},
+{
+  "dialog": ["What causes diseases", "Diseases can be caused by infections, genetics, lifestyle, or environmental factors."]
+},
+{
+  "dialog": ["Chronic diseases", "Chronic diseases like diabetes and heart disease require long-term management and care."]
+},
+{
+  "dialog": ["How to improve immunity", "You can improve immunity with a balanced diet, sleep, exercise, and stress management."]
+},
+{
+  "dialog": ["Sleep importance", "Good sleep helps your body recover, improves focus, and supports overall health."]
+},
+{
+  "dialog": ["Hydration", "Drinking enough water is essential for digestion, circulation, and body temperature regulation."]
+},
+{
+  "dialog": ["First aid", "First aid includes basic care like cleaning wounds, stopping bleeding, and seeking help if needed."]
+},
+{
+  "dialog": ["Emergency", "If it's a medical emergency, please contact emergency services immediately, 198 for Police, 190 for Ambulance and 198 for Fire Brigade."]
+},
+{
+  "dialog": ["Advice", "I'm here to help. What health advice are you looking for?"]
+},
+{
+  "dialog": ["Help", "Of course! Tell me more about what you need help with."]
+},
+{
+  "dialog": ["Thank you", "You're welcome! Stay healthy 😊"]
+},
+{
+  "dialog": ["Thanks", "Anytime! Take care of yourself."]
+}
+]

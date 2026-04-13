@@ -27,9 +27,10 @@ import ReviewsPage from "@/pages/ReviewsPage";
 import BookingFormPage from "@/pages/BookingFormPage";
 import BookingConfirmationPage from "@/pages/BookingConfirmationPage";
 import NotFoundPage from "@/pages/NotFoundPage";
+import VerificationPage from "@/pages/VerificationPage";
 
 const queryClient = new QueryClient();
-const hideChatbotOn = ['/login','/register'];
+const hideChatbotOn = ['/login', '/register'];
 const shouldShowChatbot = !hideChatbotOn.some(path => location.pathname.startsWith(path));
 
 const App = () => (
@@ -57,18 +58,20 @@ const App = () => (
           <Route element={<AuthLayout />}>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/professional-verification" element={<VerificationPage />} />
             <Route path="/reset-password" element={<ResetPasswordPage />} />
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           </Route>
 
           {/* Patient dashboard routes */}
-          <Route
+          {/*<Route
             element={
               <ProtectedRoute role="patient">
                 <DashboardLayout />
               </ProtectedRoute>
             }
-          >
+          >*/}
+          <Route element={<DashboardLayout />}>
             <Route path="/dashboard" element={<PatientDashboard />} />
             <Route path="/bookings" element={<BookingsPage />} />
             <Route path="/reviews" element={<ReviewsPage />} />
@@ -76,13 +79,16 @@ const App = () => (
           </Route>
 
           {/* Professional dashboard routes */}
-          <Route
+          {/* <Route
             element={
               <ProtectedRoute role="professional">
                 <DashboardLayout />
               </ProtectedRoute>
             }
           >
+          */}
+
+          <Route element={<DashboardLayout />}>
             <Route path="/pro/dashboard" element={<ProDashboard />} />
           </Route>
 

@@ -21,7 +21,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
       <h3 className="font-heading text-lg font-semibold text-foreground mb-2">{service.title}</h3>
       <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{service.description}</p>
       <div className="flex items-center justify-between">
-        <span className="font-semibold text-primary">${service.price}</span>
+        <span className="font-semibold text-primary">{service.price}TND</span>
         <span className="text-xs text-muted-foreground">{service.duration}</span>
       </div>
     </Link>

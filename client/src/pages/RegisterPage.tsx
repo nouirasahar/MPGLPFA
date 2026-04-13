@@ -2,8 +2,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CnButton } from "@/components/CnButton";
 import { client } from "../lib/hono-client";
+import { useNavigate } from "react-router-dom";
 
 export default function RegisterPage() {
+  {/*ce que j'ai ajouter pour verification page*/ }
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -14,6 +18,23 @@ export default function RegisterPage() {
     governorate: "",
   });
 
+  const isFormValid =
+    formData.firstName &&
+    formData.lastName &&
+    formData.email &&
+    formData.password &&
+    formData.role &&
+    formData.governorate;
+
+  const handleNext = () => {
+    if (!isFormValid) return;
+
+    localStorage.setItem("registerData", JSON.stringify(formData));
+
+    navigate("/professional-verification");
+  };
+
+  {/* old code */ }
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -110,7 +131,7 @@ export default function RegisterPage() {
             <input
               type="text"
               name="firstName"
-              placeholder="John"
+              placeholder="Mohamed"
               className="cn-input"
               value={formData.firstName}
               onChange={handleChange}
@@ -124,7 +145,7 @@ export default function RegisterPage() {
             <input
               type="text"
               name="lastName"
-              placeholder="Doe"
+              placeholder="Saad"
               className="cn-input"
               value={formData.lastName}
               onChange={handleChange}
@@ -235,9 +256,34 @@ export default function RegisterPage() {
         {error && <p className="text-sm text-red-500">{error}</p>}
         {success && <p className="text-sm text-green-600">{success}</p>}
 
-        <CnButton type="submit" className="w-full" disabled={loading}>
-          {loading ? "Creating Account..." : "Create Account"}
-        </CnButton>
+        {/*  2 buttons for each one*/}
+        <div className="flex gap-4">
+          {/* Create Account (PATIENT) */}
+          <CnButton
+            type="submit"
+            className="w-full"
+            disabled={
+              loading ||
+              !isFormValid ||
+              formData.role !== "patient"
+            }
+          >
+            {loading ? "Creating..." : "Create Account"}
+          </CnButton>
+
+          {/* Next (PROFESSIONAL) */}
+          <CnButton
+            type="button"
+            className="w-full"
+            onClick={handleNext}
+            disabled={
+              !isFormValid ||
+              formData.role !== "professional"
+            }
+          >
+            Next
+          </CnButton>
+        </div>
       </form>
 
       <p className="text-sm text-muted-foreground text-center mt-6">

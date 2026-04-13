@@ -63,29 +63,15 @@
     "activities": [
         {
             "patterns": [
-                "play",
-                "game",
-                "games",
-                "activity",
-                "activities"
+                "services",
+                "Nursing Care",
+                "Doctor Visit",
+                "Physiotherapy",
+                "Lab & samples",
+                "Post-Op Care"
             ],
             "responses": [
-                "The games designed for autistic kids are available in the Quests section.",
-                "You can find some suggested games on the home page."
-            ]
-        },
-        {
-            "patterns": [
-                "ressources",
-                "articles",
-                "news",
-                "Pdfs",
-                "Books",
-                "daily news"
-            ],
-            "responses": [
-                "The ressources and articles designed to help parents are available in the Ressource section.",
-                "You can find some suggested pdfs and articles on the ressource page."
+                "The services provided by our website will be included in the services section"
             ]
         }
     ],
@@ -145,7 +131,7 @@
             ],
             "responses": [
                 "You can book an appointment by selecting a service, choosing a professional, and picking a time that suits you.",
-                "Scheduling is simple—just browse services, select your preferred provider, and confirm your booking."
+                "Scheduling is simple—just browse services, select your preferred service, and confirm your booking."
             ]
         }
     ],
@@ -186,6 +172,15 @@
             "responses": [
                 "Our platform is mainly for scheduled and non-emergency care. For emergencies, please contact local emergency services immediately.",
                 "We recommend calling emergency services for urgent or life-threatening situations."
+            ]
+        },
+        {
+            "patterns": [
+                "Emergency",
+                "I have an emergency"
+            ],
+            "responses": [
+                "If it's a medical emergency, please contact emergency services immediately (190 for Ambulance)."
             ]
         }
     ],

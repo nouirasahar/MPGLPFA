@@ -22,11 +22,11 @@ export default function BookingFormPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="text-sm font-medium text-foreground mb-1.5 block">Full Name</label>
-              <input type="text" placeholder="John Doe" className="cn-input" required />
+              <input type="text" placeholder="Mohamed" className="cn-input" required />
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1.5 block">Phone</label>
-              <input type="tel" placeholder="+1 (555) 000-0000" className="cn-input" required />
+              <input type="tel" placeholder="+216 00 000 000" className="cn-input" required />
             </div>
           </div>
           <div>

@@ -13,7 +13,7 @@
   height: 400px;
   background: #fff;
   border: none;
-  border-radius: 30px;
+  border-radius: 20px;
   overflow: hidden;
   position: absolute;
   bottom: 60px;
@@ -101,18 +101,21 @@
   .chatbox {
     margin-left: 1000px;
   }
+  
 }
 
 @media screen and (max-width: 1070px) {
   .chatbox {
     margin-left: 900px;
   }
+  
 }
 
 @media screen and (max-width: 960px) {
   .chatbox {
     margin-left: 800px;
   }
+  
 }
 
 @media screen and (max-width: 850px) {

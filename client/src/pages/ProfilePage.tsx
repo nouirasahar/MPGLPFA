@@ -11,7 +11,7 @@ export default function ProfilePage() {
           JD
         </div>
         <div>
-          <h3 className="font-heading text-xl font-semibold text-foreground">John Doe</h3>
+          <h3 className="font-heading text-xl font-semibold text-foreground">Mohamed</h3>
           <p className="text-muted-foreground text-sm">Patient • Member since Jan 2026</p>
         </div>
       </div>
@@ -24,26 +24,26 @@ export default function ProfilePage() {
               <label className="text-sm font-medium text-foreground mb-1.5 flex items-center gap-2">
                 <User size={14} /> First Name
               </label>
-              <input type="text" defaultValue="John" className="cn-input" />
+              <input type="text" defaultValue="Mohamed" className="cn-input" />
             </div>
             <div>
               <label className="text-sm font-medium text-foreground mb-1.5 flex items-center gap-2">
                 <User size={14} /> Last Name
               </label>
-              <input type="text" defaultValue="Doe" className="cn-input" />
+              <input type="text" defaultValue="Saad" className="cn-input" />
             </div>
           </div>
           <div>
             <label className="text-sm font-medium text-foreground mb-1.5 flex items-center gap-2">
               <Mail size={14} /> Email
             </label>
-            <input type="email" defaultValue="john@example.com" className="cn-input" />
+            <input type="email" defaultValue="mohamed@example.com" className="cn-input" />
           </div>
           <div>
             <label className="text-sm font-medium text-foreground mb-1.5 flex items-center gap-2">
               <Phone size={14} /> Phone
             </label>
-            <input type="tel" defaultValue="+1 (555) 123-4567" className="cn-input" />
+            <input type="tel" defaultValue="+216 00 000 000" className="cn-input" />
           </div>
           <div>
             <label className="text-sm font-medium text-foreground mb-1.5 flex items-center gap-2">

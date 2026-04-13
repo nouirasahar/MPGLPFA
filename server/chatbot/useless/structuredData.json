@@ -1,696 +1,136 @@
 {
-    "questions": [
-        {
-            "question": "What's autism",
-            "answer": "Autism is a spectrum disorder, meaning it affects people differently and to varying degrees."
-        },
-        {
-            "question": "Why it's difficult to learn?",
-            "answer": "speech and communication delays."
-        },
-        {
-            "question": "Support for autistic children",
-            "answer": "Support plans are individualized, but early intervention and tailored therapies can make a big difference."
-        },
-        {
-            "question": "Why it's difficult to learn?",
-            "answer": "social reciprocity problems."
-        },
-        {
-            "question": "Game",
-            "answer": "The games designed for autistic kids are available in the Quests section."
-        },
-        {
-            "question": "Why do children with autism have difficulty learning in a regular classroom setting?",
-            "answer": "social reciprocity problems."
-        },
-        {
-            "question": "Hey",
-            "answer": "Hey! What would you like to talk about?"
-        },
-        {
-            "question": "Signs of autism",
-            "answer": "Common symptoms include limited eye contact, delayed speech, difficulty understanding social rules, and strong reactions to sensory input."
-        },
-        {
-            "question": "When does autism start",
-            "answer": "Signs of autism often appear by age 2 or 3, but some differences in development can be noticed even earlier."
-        },
-        {
-            "question": "Articles",
-            "answer": "You can find some suggested pdfs and articles on the ressource page."
-        },
-        {
-            "question": "Daily challenges for autistic people",
-            "answer": "Daily life can include both challenges and successes, especially with the right supports in place."
-        },
-        {
-            "question": "How do i know if someone has autism",
-            "answer": "Some signs of autism include challenges with communication, social skills, and repetitive behaviors. Would you like me to list more specific signs?"
-        },
-        {
-            "question": "Cause of autism",
-            "answer": "Autism doesn't have a single cause. It's influenced by a variety of factors, including genetics and early brain development."
-        },
-        {
-            "question": "Hi",
-            "answer": "Hi there! I'm here to help you."
-        },
-        {
-            "question": "Who diagnoses autism",
-            "answer": "Autism is usually diagnosed through a combination of developmental history, observation, and standardized tests by specialists like psychologists or developmental pediatricians."
-        },
-        {
-            "question": "Is autism linked to intelligence",
-            "answer": "Every autistic person is different — some excel in certain areas like math, music, or memory."
-        },
-        {
-            "question": "The difference in learning",
-            "answer": "coexisting learning disabilities."
-        },
-        {
-            "question": "News",
-            "answer": "You can find some suggested pdfs and articles on the ressource page."
-        },
-        {
-            "question": "Why do children with autism have difficulty learning in a regular classroom setting?",
-            "answer": "coexisting learning disabilities."
-        },
-        {
-            "question": "At what age can autism be detected",
-            "answer": "Signs of autism often appear by age 2 or 3, but some differences in development can be noticed even earlier."
-        },
-        {
-            "question": "What is autism",
-            "answer": "Autism is a spectrum disorder, meaning it affects people differently and to varying degrees."
-        },
-        {
-            "question": "Hi",
-            "answer": "Hey! What would you like to talk about?"
-        },
-        {
-            "question": "Explain autism",
-            "answer": "Autism is a neurodevelopmental condition that affects how a person communicates, interacts with others, and experiences the world."
-        },
-        {
-            "question": "Hey",
-            "answer": "Hi there! I'm here to help you."
-        },
-        {
-            "question": "Daily challenges for autistic people",
-            "answer": "Autistic individuals may find social interactions, sensory processing, or changes in routine challenging, but they also often have unique strengths."
-        },
-        {
-            "question": "What do people misunderstand about autism",
-            "answer": "Another misconception is that autistic individuals don't want friends — many do, but may communicate differently."
-        },
-        {
-            "question": "I feel good",
-            "answer": "Great!"
-        },
-        {
-            "question": "Activities",
-            "answer": "The games designed for autistic kids are available in the Quests section."
-        },
-        {
-            "question": "Support for autistic children",
-            "answer": "Common therapies include speech therapy, occupational therapy, and behavioral interventions like ABA."
-        },
-        {
-            "question": "Bonjour",
-            "answer": "Hello! How can I support you today?"
-        },
-        {
-            "question": "I am happy",
-            "answer": "That's wonderful to hear! Keep enjoying those positive moments."
-        },
-        {
-            "question": "Define autism",
-            "answer": "Autism is a spectrum disorder, meaning it affects people differently and to varying degrees."
-        },
-        {
-            "question": "What causes autism",
-            "answer": "Autism doesn't have a single cause. It's influenced by a variety of factors, including genetics and early brain development."
-        },
-        {
-            "question": "Support",
-            "answer": "Tell me more about how I can support you."
-        },
-        {
-            "question": "Hell",
-            "answer": "Hi there! I'm here to help you."
-        },
-        {
-            "question": "Games",
-            "answer": "The games designed for autistic kids are available in the Quests section."
-        },
-        {
-            "question": "How to diagnose autism",
-            "answer": "Common symptoms include limited eye contact, delayed speech, difficulty understanding social rules, and strong reactions to sensory input."
-        },
-        {
-            "question": "Misconceptions about autism",
-            "answer": "One common myth is that all autistic people have the same abilities or challenges — but autism is a spectrum and varies greatly."
-        },
-        {
-            "question": "Hello",
-            "answer": "Hi there! I'm here to help you."
-        },
-        {
-            "question": "Symptoms of autism",
-            "answer": "Some signs of autism include challenges with communication, social skills, and repetitive behaviors. Would you like me to list more specific signs?"
-        },
-        {
-            "question": "Articles",
-            "answer": "The ressources and articles designed to help parents are available in the Ressource section."
-        },
-        {
-            "question": "Why it's difficult to learn?",
-            "answer": "coexisting intellectual disability."
-        },
-        {
-            "question": "Hey",
-            "answer": "Hello! How can I support you today?"
-        },
-        {
-            "question": "What are the signs of autism",
-            "answer": "Some signs of autism include challenges with communication, social skills, and repetitive behaviors. Would you like me to list more specific signs?"
-        },
-        {
-            "question": "What causes autism",
-            "answer": "The exact cause of autism is still unknown. Researchers believe it's a combination of genetic and environmental factors."
-        },
-        {
-            "question": "Bonjour",
-            "answer": "Hey! What would you like to talk about?"
-        },
-        {
-            "question": "Advice",
-            "answer": "I'm here to help. What do you need assistance with today?"
-        },
-        {
-            "question": "Autism and intelligence",
-            "answer": "Autism is not directly related to intelligence. Some autistic individuals have intellectual disabilities, while others have average or above-average intelligence."
-        },
-        {
-            "question": "Daily news",
-            "answer": "The ressources and articles designed to help parents are available in the Ressource section."
-        },
-        {
-            "question": "How to diagnose autism",
-            "answer": "Some signs of autism include challenges with communication, social skills, and repetitive behaviors. Would you like me to list more specific signs?"
-        },
-        {
-            "question": "Hello",
-            "answer": "Hello! How can I support you today?"
-        },
-        {
-            "question": "Definition of autism",
-            "answer": "Autism is a neurodevelopmental condition that affects how a person communicates, interacts with others, and experiences the world."
-        },
-        {
-            "question": "Why does autism happen",
-            "answer": "The exact cause of autism is still unknown. Researchers believe it's a combination of genetic and environmental factors."
-        },
-        {
-            "question": "Hell",
-            "answer": "Hey! What would you like to talk about?"
-        },
-        {
-            "question": "Thank you",
-            "answer": "Glad I could help!"
-        },
-        {
-            "question": "Bonjour",
-            "answer": "Hi there! I'm here to help you."
-        },
-        {
-            "question": "Pdfs",
-            "answer": "You can find some suggested pdfs and articles on the ressource page."
-        },
-        {
-            "question": "The difference in learning",
-            "answer": "aggression to self or others."
-        },
-        {
-            "question": "Living with autism",
-            "answer": "Daily life can include both challenges and successes, especially with the right supports in place."
-        },
-        {
-            "question": "Why it's difficult to learn?",
-            "answer": "coexisting learning disabilities."
-        },
-        {
-            "question": "Activities",
-            "answer": "You can find some suggested games on the home page."
-        },
-        {
-            "question": "Bonjour",
-            "answer": "Hi there! I'm here to help you."
-        },
-        {
-            "question": "Define autism",
-            "answer": "Autism is a neurodevelopmental condition that affects how a person communicates, interacts with others, and experiences the world."
-        },
-        {
-            "question": "I feel upset",
-            "answer": "I'm sorry you're feeling that way. Would you like some breathing exercises or calming activities?"
-        },
-        {
-            "question": "Play",
-            "answer": "The games designed for autistic kids are available in the Quests section."
-        },
-        {
-            "question": "Are there treatments available for autism?",
-            "answer": "There is no cure for autism, but therapies and supports can help individuals thrive."
-        },
-        {
-            "question": "How is autism diagnosed",
-            "answer": "Autism is usually diagnosed through a combination of developmental history, observation, and standardized tests by specialists like psychologists or developmental pediatricians."
-        },
-        {
-            "question": "Is there a cure for autism",
-            "answer": "There is no cure for autism, but therapies and supports can help individuals thrive."
-        },
-        {
-            "question": "Hello",
-            "answer": "Hey! What would you like to talk about?"
-        },
-        {
-            "question": "Pdfs",
-            "answer": "The ressources and articles designed to help parents are available in the Ressource section."
-        },
-        {
-            "question": "Autism diagnosis process",
-            "answer": "Autism is usually diagnosed through a combination of developmental history, observation, and standardized tests by specialists like psychologists or developmental pediatricians."
-        },
-        {
-            "question": "Books",
-            "answer": "The ressources and articles designed to help parents are available in the Ressource section."
-        },
-        {
-            "question": "Good morning",
-            "answer": "Hey! What would you like to talk about?"
-        },
-        {
-            "question": "I am happy",
-            "answer": "Great!"
-        },
-        {
-            "question": "I need help",
-            "answer": "I'm here to help. What do you need assistance with today?"
-        },
-        {
-            "question": "Activity",
-            "answer": "You can find some suggested games on the home page."
-        },
-        {
-            "question": "Symptoms of autism",
-            "answer": "Common symptoms include limited eye contact, delayed speech, difficulty understanding social rules, and strong reactions to sensory input."
-        },
-        {
-            "question": "What do people misunderstand about autism",
-            "answer": "One common myth is that all autistic people have the same abilities or challenges — but autism is a spectrum and varies greatly."
-        },
-        {
-            "question": "The difference in learning",
-            "answer": "affective Instability."
-        },
-        {
-            "question": "What's autism",
-            "answer": "Autism is a neurodevelopmental condition that affects how a person communicates, interacts with others, and experiences the world."
-        },
-        {
-            "question": "I am overwhelmed",
-            "answer": "It's okay to feel overwhelmed or anxious sometimes. I'm here to listen if you want to share more."
-        },
-        {
-            "question": "How does autism affect daily life",
-            "answer": "Daily life can include both challenges and successes, especially with the right supports in place."
-        },
-        {
-            "question": "Why do children with autism have difficulty learning in a regular classroom setting?",
-            "answer": "require individual supervision to participate in the classroom."
-        },
-        {
-            "question": "Games",
-            "answer": "You can find some suggested games on the home page."
-        },
-        {
-            "question": "Can you help me",
-            "answer": "I'm here to help. What do you need assistance with today?"
-        },
-        {
-            "question": "Early signs of autism",
-            "answer": "Signs of autism often appear by age 2 or 3, but some differences in development can be noticed even earlier."
-        },
-        {
-            "question": "Why does autism happen",
-            "answer": "Autism doesn't have a single cause. It's influenced by a variety of factors, including genetics and early brain development."
-        },
-        {
-            "question": "Books",
-            "answer": "You can find some suggested pdfs and articles on the ressource page."
-        },
-        {
-            "question": "How can autism be managed",
-            "answer": "Support plans are individualized, but early intervention and tailored therapies can make a big difference."
-        },
-        {
-            "question": "The difference in learning",
-            "answer": "coexisting intellectual disability."
-        },
-        {
-            "question": "Hello",
-            "answer": "Hi there! I'm here to help you."
-        },
-        {
-            "question": "Why do children with autism have difficulty learning in a regular classroom setting?",
-            "answer": "speech and communication delays."
-        },
-        {
-            "question": "Can autism be cured",
-            "answer": "There is no cure for autism, but therapies and supports can help individuals thrive."
-        },
-        {
-            "question": "What is autism",
-            "answer": "Autism is a neurodevelopmental condition that affects how a person communicates, interacts with others, and experiences the world."
-        },
-        {
-            "question": "Bonjour",
-            "answer": "Hey! What would you like to talk about?"
-        },
-        {
-            "question": "Why do children with autism have difficulty learning in a regular classroom setting?",
-            "answer": "coexisting intellectual disability."
-        },
-        {
-            "question": "Advice",
-            "answer": "Tell me more about how I can support you."
-        },
-        {
-            "question": "At what age can autism be detected",
-            "answer": "Early signs can include avoiding eye contact, delayed speech milestones, and limited use of gestures like pointing or waving."
-        },
-        {
-            "question": "Autism and intelligence",
-            "answer": "Every autistic person is different — some excel in certain areas like math, music, or memory."
-        },
-        {
-            "question": "The difference in learning",
-            "answer": "speech and communication delays."
-        },
-        {
-            "question": "Good morning",
-            "answer": "Hello! How can I support you today?"
-        },
-        {
-            "question": "Thank you very much",
-            "answer": "Glad I could help!"
-        },
-        {
-            "question": "Living with autism",
-            "answer": "Autistic individuals may find social interactions, sensory processing, or changes in routine challenging, but they also often have unique strengths."
-        },
-        {
-            "question": "Common myths about autism",
-            "answer": "Another misconception is that autistic individuals don't want friends — many do, but may communicate differently."
-        },
-        {
-            "question": "How is autism diagnosed",
-            "answer": "Diagnosis often involves a team of professionals evaluating communication, behavior, and developmental skills."
-        },
-        {
-            "question": "Why do children with autism have difficulty learning in a regular classroom setting?",
-            "answer": "affective Instability."
-        },
-        {
-            "question": "Activity",
-            "answer": "The games designed for autistic kids are available in the Quests section."
-        },
-        {
-            "question": "The difference in learning",
-            "answer": "require individual supervision to participate in the classroom."
-        },
-        {
-            "question": "I am stressed",
-            "answer": "I'm sorry you're feeling that way. Would you like some breathing exercises or calming activities?"
-        },
-        {
-            "question": "Can autism be cured",
-            "answer": "Autism is not something that needs to be cured. With the right support and understanding, autistic individuals can live happy and fulfilling lives."
-        },
-        {
-            "question": "What are the signs of autism",
-            "answer": "Common symptoms include limited eye contact, delayed speech, difficulty understanding social rules, and strong reactions to sensory input."
-        },
-        {
-            "question": "Thanks",
-            "answer": "You're very welcome!"
-        },
-        {
-            "question": "Is there a cure for autism",
-            "answer": "Autism is not something that needs to be cured. With the right support and understanding, autistic individuals can live happy and fulfilling lives."
-        },
-        {
-            "question": "Signs of autism",
-            "answer": "Some signs of autism include challenges with communication, social skills, and repetitive behaviors. Would you like me to list more specific signs?"
-        },
-        {
-            "question": "I feel upset",
-            "answer": "It's okay to feel overwhelmed or anxious sometimes. I'm here to listen if you want to share more."
-        },
-        {
-            "question": "Good morning",
-            "answer": "Hi there! I'm here to help you."
-        },
-        {
-            "question": "I am overwhelmed",
-            "answer": "I'm sorry you're feeling that way. Would you like some breathing exercises or calming activities?"
-        },
-        {
-            "question": "How does autism affect daily life",
-            "answer": "Autistic individuals may find social interactions, sensory processing, or changes in routine challenging, but they also often have unique strengths."
-        },
-        {
-            "question": "What therapies help autism",
-            "answer": "Common therapies include speech therapy, occupational therapy, and behavioral interventions like ABA."
-        },
-        {
-            "question": "Good evening",
-            "answer": "Hi there! I'm here to help you."
-        },
-        {
-            "question": "Why it's difficult to learn?",
-            "answer": "require individual supervision to participate in the classroom."
-        },
-        {
-            "question": "How can autism be managed",
-            "answer": "Common therapies include speech therapy, occupational therapy, and behavioral interventions like ABA."
-        },
-        {
-            "question": "Early signs of autism",
-            "answer": "Early signs can include avoiding eye contact, delayed speech milestones, and limited use of gestures like pointing or waving."
-        },
-        {
-            "question": "Explain autism",
-            "answer": "Autism is a spectrum disorder, meaning it affects people differently and to varying degrees."
-        },
-        {
-            "question": "Good evening",
-            "answer": "Hello! How can I support you today?"
-        },
-        {
-            "question": "I feel anxious",
-            "answer": "I'm sorry you're feeling that way. Would you like some breathing exercises or calming activities?"
-        },
-        {
-            "question": "Thank you very much",
-            "answer": "You're very welcome!"
-        },
-        {
-            "question": "Ressources",
-            "answer": "The ressources and articles designed to help parents are available in the Ressource section."
-        },
-        {
-            "question": "What therapies help autism",
-            "answer": "Support plans are individualized, but early intervention and tailored therapies can make a big difference."
-        },
-        {
-            "question": "Good evening",
-            "answer": "Hey! What would you like to talk about?"
-        },
-        {
-            "question": "Daily news",
-            "answer": "You can find some suggested pdfs and articles on the ressource page."
-        },
-        {
-            "question": "Hello",
-            "answer": "Hello! How can I support you today?"
-        },
-        {
-            "question": "Common myths about autism",
-            "answer": "One common myth is that all autistic people have the same abilities or challenges — but autism is a spectrum and varies greatly."
-        },
-        {
-            "question": "Game",
-            "answer": "You can find some suggested games on the home page."
-        },
-        {
-            "question": "Bonjour",
-            "answer": "Hello! How can I support you today?"
-        },
-        {
-            "question": "I feel anxious",
-            "answer": "It's okay to feel overwhelmed or anxious sometimes. I'm here to listen if you want to share more."
-        },
-        {
-            "question": "I am stressed",
-            "answer": "It's okay to feel overwhelmed or anxious sometimes. I'm here to listen if you want to share more."
-        },
-        {
-            "question": "Why do children with autism have difficulty learning in a regular classroom setting?",
-            "answer": "aggression to self or others."
-        },
-        {
-            "question": "I need help",
-            "answer": "Tell me more about how I can support you."
-        },
-        {
-            "question": "Thanks",
-            "answer": "Glad I could help!"
-        },
-        {
-            "question": "Cause of autism",
-            "answer": "The exact cause of autism is still unknown. Researchers believe it's a combination of genetic and environmental factors."
-        },
-        {
-            "question": "News",
-            "answer": "The ressources and articles designed to help parents are available in the Ressource section."
-        },
-        {
-            "question": "Play",
-            "answer": "You can find some suggested games on the home page."
-        },
-        {
-            "question": "Autism diagnosis process",
-            "answer": "Diagnosis often involves a team of professionals evaluating communication, behavior, and developmental skills."
-        },
-        {
-            "question": "Thank you",
-            "answer": "Anytime, happy to assist."
-        },
-        {
-            "question": "Are autistic people intelligent",
-            "answer": "Every autistic person is different — some excel in certain areas like math, music, or memory."
-        },
-        {
-            "question": "Definition of autism",
-            "answer": "Autism is a spectrum disorder, meaning it affects people differently and to varying degrees."
-        },
-        {
-            "question": "When does autism start",
-            "answer": "Early signs can include avoiding eye contact, delayed speech milestones, and limited use of gestures like pointing or waving."
-        },
-        {
-            "question": "Is autism linked to intelligence",
-            "answer": "Autism is not directly related to intelligence. Some autistic individuals have intellectual disabilities, while others have average or above-average intelligence."
-        },
-        {
-            "question": "Hell",
-            "answer": "Hello! How can I support you today?"
-        },
-        {
-            "question": "Are autistic people intelligent",
-            "answer": "Autism is not directly related to intelligence. Some autistic individuals have intellectual disabilities, while others have average or above-average intelligence."
-        },
-        {
-            "question": "Why it's difficult to learn?",
-            "answer": "affective Instability."
-        },
-        {
-            "question": "Support",
-            "answer": "I'm here to help. What do you need assistance with today?"
-        },
-        {
-            "question": "Misconceptions about autism",
-            "answer": "Another misconception is that autistic individuals don't want friends — many do, but may communicate differently."
-        },
-        {
-            "question": "How do i know if someone has autism",
-            "answer": "Common symptoms include limited eye contact, delayed speech, difficulty understanding social rules, and strong reactions to sensory input."
-        },
-        {
-            "question": "Can you help me",
-            "answer": "Tell me more about how I can support you."
-        },
-        {
-            "question": "I feel good",
-            "answer": "That's wonderful to hear! Keep enjoying those positive moments."
-        },
-        {
-            "question": "I am calm",
-            "answer": "Great!"
-        },
-        {
-            "question": "Hello",
-            "answer": "Hey! What would you like to talk about?"
-        },
-        {
-            "question": "Thank you",
-            "answer": "You're very welcome!"
-        },
-        {
-            "question": "Who diagnoses autism",
-            "answer": "Diagnosis often involves a team of professionals evaluating communication, behavior, and developmental skills."
-        },
-        {
-            "question": "Ressources",
-            "answer": "You can find some suggested pdfs and articles on the ressource page."
-        },
-        {
-            "question": "Hi",
-            "answer": "Hello! How can I support you today?"
-        },
-        {
-            "question": "Are there treatments available for autism?",
-            "answer": "Autism is not something that needs to be cured. With the right support and understanding, autistic individuals can live happy and fulfilling lives."
-        },
-        {
-            "question": "Thank you very much",
-            "answer": "Anytime, happy to assist."
-        },
-        {
-            "question": "The difference in learning",
-            "answer": "social reciprocity problems."
-        },
-        {
-            "question": "Why it's difficult to learn?",
-            "answer": "aggression to self or others."
-        },
-        {
-            "question": "I am calm",
-            "answer": "That's wonderful to hear! Keep enjoying those positive moments."
-        },
-        {
-            "question": "Thanks",
-            "answer": "Anytime, happy to assist."
-        },
-        {
-            "question": "what can you do?",
-            "answer": "i am a chatbot built to help you learn more about autism disorder"
-        },
-        {
-            "question": "how are you?",
-            "answer": "im good thanks how are you?"
-        },
-        {
-            "question": "im good thanks",
-            "answer": "That's great, how can I help you today?"
-        },
-        {
-            "question": "hi",
-            "answer": "Hello"
-        }
-    ]
+  "questions": [
+    {
+      "question": "Hi",
+      "answer": "Hello! How can I help you with your health today?"
+    },
+    {
+      "question": "Hey",
+      "answer": "Hi there! What health topic would you like to talk about?"
+    },
+    {
+      "question": "Hello",
+      "answer": "Hello! I'm here to support your health questions."
+    },
+    {
+      "question": "How are you",
+      "answer": "I'm doing well, thanks! How can I assist you today?"
+    },
+    {
+      "question": "What is health",
+      "answer": "Health is a state of complete physical, mental, and social well-being, not just the absence of disease."
+    },
+    {
+      "question": "Why is health important",
+      "answer": "Good health allows you to live a longer, more active, and fulfilling life."
+    },
+    {
+      "question": "Common diseases",
+      "answer": "Common diseases include flu, infections, diabetes, heart disease, and high blood pressure."
+    },
+    {
+      "question": "Symptoms of flu",
+      "answer": "Flu symptoms include fever, cough, sore throat, body aches, and fatigue."
+    },
+    {
+      "question": "How to stay healthy",
+      "answer": "Maintain a balanced diet, exercise regularly, sleep well, and manage stress."
+    },
+    {
+      "question": "Healthy diet",
+      "answer": "A healthy diet includes fruits, vegetables, whole grains, proteins, and plenty of water."
+    },
+    {
+      "question": "Benefits of exercise",
+      "answer": "Exercise improves heart health, boosts mood, and helps maintain a healthy weight."
+    },
+    {
+      "question": "Mental health",
+      "answer": "Mental health includes emotional and psychological well-being and is essential for overall health."
+    },
+    {
+      "question": "I feel stressed",
+      "answer": "I'm sorry you're feeling stressed. Would you like some relaxation or breathing exercises?"
+    },
+    {
+      "question": "I feel anxious",
+      "answer": "It's okay to feel anxious sometimes. I'm here to listen or suggest ways to cope."
+    },
+    {
+      "question": "I feel sick",
+      "answer": "I'm sorry you're not feeling well. Can you describe your symptoms?"
+    },
+    {
+      "question": "I feel good",
+      "answer": "That's great to hear! Keep taking care of yourself."
+    },
+    {
+      "question": "When should I see a doctor",
+      "answer": "You should see a doctor if symptoms are severe, persistent, or getting worse."
+    },
+    {
+      "question": "Preventive care",
+      "answer": "Preventive care includes regular check-ups, screenings, vaccinations, and healthy habits."
+    },
+    {
+      "question": "Vaccines",
+      "answer": "Vaccines protect you from serious diseases by helping your immune system fight infections."
+    },
+    {
+      "question": "What causes diseases",
+      "answer": "Diseases can be caused by infections, genetics, lifestyle, or environmental factors."
+    },
+    {
+      "question": "Chronic diseases",
+      "answer": "Chronic diseases like diabetes or heart disease require long-term management."
+    },
+    {
+      "question": "How to boost immunity",
+      "answer": "Eat healthy, sleep well, exercise, and reduce stress to support your immune system."
+    },
+    {
+      "question": "Importance of sleep",
+      "answer": "Sleep helps your body recover, improves focus, and supports overall health."
+    },
+    {
+      "question": "Hydration",
+      "answer": "Drinking enough water is essential for your body's functions like digestion and circulation."
+    },
+    {
+      "question": "First aid",
+      "answer": "Basic first aid includes cleaning wounds, stopping bleeding, and seeking medical help if needed."
+    },
+    {
+      "question": "Emergency",
+      "answer": "If it's a medical emergency, please contact emergency services immediately, 198 for Police, 190 for Ambulance and 198 for Fire Brigade."
+    },
+    {
+      "question": "Advice",
+      "answer": "I'm here to help. What health advice are you looking for?"
+    },
+    {
+      "question": "Help",
+      "answer": "Of course! Tell me more about what you need help with."
+    },
+    {
+      "question": "News",
+      "answer": "Check the home page for the latest health-related articles."
+    },
+    {
+      "question": "Services",
+      "answer": "You can explore our health services in the services section."
+    },
+    {
+      "question": "Thank you",
+      "answer": "You're very welcome!"
+    },
+    {
+      "question": "Thanks",
+      "answer": "Anytime! Take care of your health."
+    },
+    {
+      "question": "What can you do",
+      "answer": "I can help answer health-related questions and guide you with basic advice."
+    }
+  ]
 }

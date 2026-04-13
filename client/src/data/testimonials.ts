@@ -3,7 +3,7 @@ import type { Testimonial, FAQ, Booking, Review } from "@/types";
 export const testimonials: Testimonial[] = [
   {
     id: "1",
-    name: "Sarah Johnson",
+    name: "Mohamed Saad",
     role: "Patient",
     comment: "CareNow made it so easy to get nursing care for my mother. The nurse was professional, compassionate, and thorough. Highly recommend!",
     rating: 5,
@@ -11,7 +11,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "2",
-    name: "Michael Chen",
+    name: "Ahmed Boughzela",
     role: "Patient",
     comment: "After my knee surgery, the physiotherapy sessions at home were a game-changer. I recovered faster without the hassle of traveling.",
     rating: 5,
@@ -19,7 +19,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "3",
-    name: "Emily Rodriguez",
+    name: "Serine Miled",
     role: "Patient",
     comment: "Blood sample collection at home saved me hours of waiting. Results were quick and the phlebotomist was excellent.",
     rating: 4,

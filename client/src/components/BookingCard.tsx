@@ -26,7 +26,7 @@ export function BookingCard({ booking }: { booking: Booking }) {
         </div>
       </div>
       <div className="text-right">
-        <p className="font-semibold text-foreground text-lg">${booking.price}</p>
+        <p className="font-semibold text-foreground text-lg">{booking.price} TND</p>
       </div>
     </div>
   );

@@ -50,8 +50,7 @@ export default function ServiceDetailPage() {
           <div className="md:col-span-2">
             <div className="cn-card sticky top-24">
               <div className="flex items-center gap-3 mb-4">
-                <DollarSign size={20} className="text-primary" />
-                <span className="text-2xl font-bold text-foreground">${service.price}</span>
+                <span className="text-2xl font-bold text-foreground">{service.price} TND</span>
               </div>
               <div className="flex items-center gap-3 mb-6 text-sm text-muted-foreground">
                 <Clock size={18} /> {service.duration}
