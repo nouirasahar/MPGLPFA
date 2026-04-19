@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
@@ -30,71 +30,86 @@ import NotFoundPage from "@/pages/NotFoundPage";
 import VerificationPage from "@/pages/VerificationPage";
 
 const queryClient = new QueryClient();
-const hideChatbotOn = ['/login', '/register'];
-const shouldShowChatbot = !hideChatbotOn.some(path => location.pathname.startsWith(path));
+
+function AppContent() {
+  const location = useLocation();
+  const hideChatbotOn = ["/login", "/register"];
+  const shouldShowChatbot = !hideChatbotOn.some((path) =>
+    location.pathname.startsWith(path)
+  );
+
+  return (
+    <>
+      <Sonner />
+      {shouldShowChatbot && <ChatbotComponent />}
+
+      <Routes>
+        {/* Public routes */}
+        <Route element={<PublicLayout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/:id" element={<ServiceDetailPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/booking" element={<BookingFormPage />} />
+          <Route
+            path="/booking/confirmation"
+            element={<BookingConfirmationPage />}
+          />
+        </Route>
+
+        {/* Auth routes */}
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route
+            path="/professional-verification"
+            element={<VerificationPage />}
+          />
+          <Route path="/reset-password" element={<ResetPasswordPage />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        </Route>
+
+        {/* Patient dashboard routes */}
+        <Route
+          element={
+            <ProtectedRoute role="patient">
+              <DashboardLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route path="/dashboard" element={<PatientDashboard />} />
+          <Route path="/bookings" element={<BookingsPage />} />
+          <Route path="/reviews" element={<ReviewsPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+        </Route>
+
+        {/* Professional dashboard routes */}
+        <Route
+          element={
+            <ProtectedRoute role="professional">
+              <DashboardLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route path="/pro/dashboard" element={<ProDashboard />} />
+          <Route path="/pro/appointments" element={<BookingsPage />} />
+          <Route path="/pro/reviews" element={<ReviewsPage />} />
+          <Route path="/pro/profile" element={<ProfilePage />} />
+        </Route>
+
+        {/* 404 */}
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </>
+  );
+}
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Sonner />
-      {shouldShowChatbot && <ChatbotComponent />}
       <BrowserRouter>
-        <Routes>
-          {/* Public routes */}
-          <Route element={<PublicLayout />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/services/:id" element={<ServiceDetailPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/booking" element={<BookingFormPage />} />
-            <Route
-              path="/booking/confirmation"
-              element={<BookingConfirmationPage />}
-            />
-          </Route>
-
-          {/* Auth routes */}
-          <Route element={<AuthLayout />}>
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/professional-verification" element={<VerificationPage />} />
-            <Route path="/reset-password" element={<ResetPasswordPage />} />
-            <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-          </Route>
-
-          {/* Patient dashboard routes */}
-          {/*<Route
-            element={
-              <ProtectedRoute role="patient">
-                <DashboardLayout />
-              </ProtectedRoute>
-            }
-          >*/}
-          <Route element={<DashboardLayout />}>
-            <Route path="/dashboard" element={<PatientDashboard />} />
-            <Route path="/bookings" element={<BookingsPage />} />
-            <Route path="/reviews" element={<ReviewsPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
-          </Route>
-
-          {/* Professional dashboard routes */}
-          {/* <Route
-            element={
-              <ProtectedRoute role="professional">
-                <DashboardLayout />
-              </ProtectedRoute>
-            }
-          >
-          */}
-
-          <Route element={<DashboardLayout />}>
-            <Route path="/pro/dashboard" element={<ProDashboard />} />
-          </Route>
-
-          {/* 404 */}
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+        <AppContent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

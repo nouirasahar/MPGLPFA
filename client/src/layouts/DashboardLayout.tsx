@@ -45,7 +45,6 @@ export function DashboardLayout() {
 
   return (
     <div className="min-h-screen flex bg-background">
-      {/* Sidebar */}
       <aside
         className={cn(
           "fixed inset-y-0 left-0 z-40 w-64 bg-card border-r border-border flex flex-col transition-transform lg:translate-x-0 lg:static",
@@ -53,7 +52,11 @@ export function DashboardLayout() {
         )}
       >
         <div className="flex items-center gap-2 px-6 h-16 border-b border-border">
-          <Link to="/" className="flex items-center gap-2" onClick={() => setSidebarOpen(false)}>
+          <Link
+            to="/"
+            className="flex items-center gap-2"
+            onClick={() => setSidebarOpen(false)}
+          >
             <div className="w-8 h-8 rounded-lg cn-gradient-bg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">C</span>
             </div>
@@ -102,10 +105,13 @@ export function DashboardLayout() {
         />
       )}
 
-      {/* Main */}
       <div className="flex-1 flex flex-col min-w-0">
         <header className="sticky top-0 z-20 bg-card/80 backdrop-blur-lg border-b border-border h-16 flex items-center px-6 gap-4">
-          <button type="button" className="lg:hidden" onClick={() => setSidebarOpen(true)}>
+          <button
+            type="button"
+            className="lg:hidden"
+            onClick={() => setSidebarOpen(true)}
+          >
             {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 

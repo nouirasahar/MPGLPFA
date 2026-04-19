@@ -1,21 +1,25 @@
-import type { Context, Next } from 'hono'
-import { verifyToken } from '../utils/jwt'
+import { createMiddleware } from 'hono/factory'
+import { getCookie } from 'hono/cookie'
+import jwt from 'jsonwebtoken'
 
-export const authMiddleware = async (c: Context, next: Next) => {
+export const authMiddleware = createMiddleware(async (c, next) => {
   try {
-    const authHeader = c.req.header('Authorization')
+    const token = getCookie(c, 'token')
 
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return c.json({ message: 'Unauthorized: No token provided' }, 401)
+    if (!token) {
+      return c.json({ message: 'Unauthorized' }, 401)
     }
 
-    const token = authHeader.split(' ')[1]
-    const decoded = verifyToken(token)
+    const decoded = jwt.verify(token, process.env.JWT_SECRET as string) as {
+      userId: string
+      email: string
+      role: string
+    }
 
     c.set('user', decoded)
 
     await next()
   } catch (error) {
-    return c.json({ message: 'Unauthorized: Invalid token' }, 401)
+    return c.json({ message: 'Invalid or expired token' }, 401)
   }
-}
+})

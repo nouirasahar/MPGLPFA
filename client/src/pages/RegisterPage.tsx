@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CnButton } from "@/components/CnButton";
 import { client } from "../lib/hono-client";
-import { useNavigate } from "react-router-dom";
 
 export default function RegisterPage() {
-  {/*ce que j'ai ajouter pour verification page*/ }
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -18,6 +16,10 @@ export default function RegisterPage() {
     governorate: "",
   });
 
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
   const isFormValid =
     formData.firstName &&
     formData.lastName &&
@@ -25,19 +27,6 @@ export default function RegisterPage() {
     formData.password &&
     formData.role &&
     formData.governorate;
-
-  const handleNext = () => {
-    if (!isFormValid) return;
-
-    localStorage.setItem("registerData", JSON.stringify(formData));
-
-    navigate("/professional-verification");
-  };
-
-  {/* old code */ }
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -48,21 +37,44 @@ export default function RegisterPage() {
     }));
   };
 
+  const signUpUser = async () => {
+    const fullName = `${formData.firstName} ${formData.lastName}`.trim();
+
+    const response = await client.api.auth["sign-up"].$post({
+      json: {
+        name: fullName,
+        email: formData.email,
+        password: formData.password,
+        role: formData.role as "patient" | "professional",
+        governorate: formData.governorate,
+      },
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        "message" in data ? String(data.message) : "Registration failed"
+      );
+    }
+
+    if ("token" in data && data.token) {
+      localStorage.setItem("token", data.token);
+    }
+
+    if ("user" in data && data.user) {
+      localStorage.setItem("user", JSON.stringify(data.user));
+    }
+
+    return data;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     setSuccess("");
 
-    const fullName = `${formData.firstName} ${formData.lastName}`.trim();
-
-    if (
-      !formData.firstName ||
-      !formData.lastName ||
-      !formData.email ||
-      !formData.password ||
-      !formData.role ||
-      !formData.governorate
-    ) {
+    if (!isFormValid) {
       setError("Please fill in all required fields.");
       return;
     }
@@ -70,42 +82,20 @@ export default function RegisterPage() {
     try {
       setLoading(true);
 
-      const response = await client.api.auth["sign-up"].$post({
-        json: {
-          name: fullName,
-          email: formData.email,
-          password: formData.password,
-          role: formData.role as "patient" | "professional",
-          governorate: formData.governorate,
-        },
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        setError(
-          "message" in data ? String(data.message) : "Registration failed"
-        );
-        return;
-      }
-
-      if ("token" in data && data.token) {
-        localStorage.setItem("token", data.token);
-      }
+      const data = await signUpUser();
 
       setSuccess("Account created successfully.");
-
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        password: "",
-        role: "",
-        governorate: "",
-      });
-
       console.log("Sign-up success:", data);
+
+      if (formData.role === "patient") {
+        setTimeout(() => {
+          navigate("/login");
+        }, 1200);
+      } else if (formData.role === "professional") {
+        setTimeout(() => {
+          navigate("/professional-verification");
+        }, 800);
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong.");
     } finally {
@@ -256,34 +246,17 @@ export default function RegisterPage() {
         {error && <p className="text-sm text-red-500">{error}</p>}
         {success && <p className="text-sm text-green-600">{success}</p>}
 
-        {/*  2 buttons for each one*/}
-        <div className="flex gap-4">
-          {/* Create Account (PATIENT) */}
-          <CnButton
-            type="submit"
-            className="w-full"
-            disabled={
-              loading ||
-              !isFormValid ||
-              formData.role !== "patient"
-            }
-          >
-            {loading ? "Creating..." : "Create Account"}
-          </CnButton>
-
-          {/* Next (PROFESSIONAL) */}
-          <CnButton
-            type="button"
-            className="w-full"
-            onClick={handleNext}
-            disabled={
-              !isFormValid ||
-              formData.role !== "professional"
-            }
-          >
-            Next
-          </CnButton>
-        </div>
+        <CnButton
+          type="submit"
+          className="w-full"
+          disabled={loading || !isFormValid}
+        >
+          {loading
+            ? "Creating..."
+            : formData.role === "professional"
+            ? "Next"
+            : "Create Account"}
+        </CnButton>
       </form>
 
       <p className="text-sm text-muted-foreground text-center mt-6">

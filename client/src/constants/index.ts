@@ -6,19 +6,18 @@ export const PUBLIC_NAV_ITEMS: NavItem[] = [
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
 ];
-
-export const DASHBOARD_PATIENT_NAV: NavItem[] = [
+export const DASHBOARD_PATIENT_NAV = [
   { label: "Dashboard", path: "/dashboard" },
-  { label: "Bookings", path: "/bookings" },
+  { label: "Appointments", path: "/bookings" },
   { label: "Reviews", path: "/reviews" },
   { label: "Profile", path: "/profile" },
 ];
 
-export const DASHBOARD_PRO_NAV: NavItem[] = [
+export const DASHBOARD_PRO_NAV = [
   { label: "Dashboard", path: "/pro/dashboard" },
   { label: "Appointments", path: "/pro/appointments" },
   { label: "Reviews", path: "/pro/reviews" },
-  { label: "Profile", path: "/profile" },
+  { label: "Profile", path: "/pro/profile" },
 ];
 
 export const SERVICE_CATEGORIES = [

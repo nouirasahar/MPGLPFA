@@ -21,9 +21,12 @@ authRoute.post('/sign-up', async (c) => {
       )
     }
 
+    const normalizedName = String(name).trim()
     const normalizedEmail = String(email).toLowerCase().trim()
+    const normalizedRole = String(role).trim().toLowerCase()
+    const normalizedGovernorate = String(governorate).trim()
 
-    const existingUser = await User.findOne({ email: normalizedEmail } as any)
+    const existingUser = await User.findOne({ email: normalizedEmail })
 
     if (existingUser) {
       return c.json({ message: 'User already exists' }, 409)
@@ -32,11 +35,16 @@ authRoute.post('/sign-up', async (c) => {
     const hashedPassword = await bcrypt.hash(password, 10)
 
     const newUser = await User.create({
-      name: String(name).trim(),
+      name: normalizedName,
       email: normalizedEmail,
       password: hashedPassword,
-      role,
-      governorate,
+      role: normalizedRole,
+      governorate: normalizedGovernorate,
+      specialty: '',
+      price: 0,
+      verificationStatus: 'NOT_VERIFIED',
+      detectedRole: '',
+      isVerified: false,
     })
 
     const token = generateToken({
@@ -55,6 +63,10 @@ authRoute.post('/sign-up', async (c) => {
           email: newUser.email,
           role: newUser.role,
           governorate: newUser.governorate,
+          specialty: newUser.specialty,
+          price: newUser.price,
+          verificationStatus: newUser.verificationStatus,
+          detectedRole: newUser.detectedRole,
           isVerified: newUser.isVerified,
         },
       },
@@ -105,6 +117,10 @@ authRoute.post('/sign-in', async (c) => {
           email: user.email,
           role: user.role,
           governorate: user.governorate,
+          specialty: user.specialty,
+          price: user.price,
+          verificationStatus: user.verificationStatus,
+          detectedRole: user.detectedRole,
           isVerified: user.isVerified,
         },
       },

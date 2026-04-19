@@ -26,7 +26,10 @@ professionalRoute.get('/dashboard', authMiddleware, async (c) => {
       bookings.map((b: any) => String(b.patient?._id || b.patient))
     )
 
-    const earnings = completedBookings.reduce((sum, booking) => sum + (booking.price || 0), 0)
+    const earnings = completedBookings.reduce(
+      (sum, booking) => sum + (booking.price || 0),
+      0
+    )
 
     const ratings = bookings.filter((b) => typeof b.rating === 'number')
     const avgRating =
@@ -44,6 +47,11 @@ professionalRoute.get('/dashboard', authMiddleware, async (c) => {
         email: professional.email,
         role: professional.role,
         governorate: professional.governorate,
+        specialty: professional.specialty,
+        price: professional.price,
+        verificationStatus: professional.verificationStatus,
+        detectedRole: professional.detectedRole,
+        isVerified: professional.isVerified,
       },
       stats: {
         todayAppointments: todayAppointments.length,
@@ -56,6 +64,59 @@ professionalRoute.get('/dashboard', authMiddleware, async (c) => {
   } catch (error) {
     console.error('Professional dashboard error:', error)
     return c.json({ message: 'Internal server error' }, 500)
+  }
+})
+
+professionalRoute.post('/complete-profile', async (c) => {
+  try {
+    const body = await c.req.json()
+
+    const {
+      email,
+      specialty,
+      price,
+      verificationStatus,
+      detectedRole,
+    } = body
+
+    const professional = await User.findOne({ email })
+
+    if (!professional) {
+      return c.json({ message: 'User not found' }, 404)
+    }
+
+    professional.specialty = specialty
+    professional.price = Number(price)
+    professional.verificationStatus = verificationStatus
+    professional.detectedRole = detectedRole
+    professional.isVerified = verificationStatus === 'BASIC_VERIFIED'
+
+    await professional.save()
+
+    return c.json({
+      success: true,
+      message: 'Professional profile saved successfully',
+      user: {
+        id: professional._id,
+        name: professional.name,
+        email: professional.email,
+        role: professional.role,
+        governorate: professional.governorate,
+        specialty: professional.specialty,
+        price: professional.price,
+        verificationStatus: professional.verificationStatus,
+        detectedRole: professional.detectedRole,
+        isVerified: professional.isVerified,
+      },
+    })
+  } catch (error: any) {
+    console.error('Complete profile error:', error)
+    return c.json(
+      {
+        message: error?.message || 'Internal server error',
+      },
+      500
+    )
   }
 })
 

@@ -7,7 +7,13 @@ import patientRoute from './routes/patient.route'
 import professionalRoute from './routes/professional.route'
 const app = new Hono()
 
-app.use('*', cors())
+app.use(
+  '*',
+  cors({
+    origin: 'http://localhost:8080',
+    credentials: true,
+  })
+)
 
 app.get('/', (c) => {
   return c.json({

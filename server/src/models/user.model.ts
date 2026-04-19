@@ -57,6 +57,28 @@ const userSchema = new Schema(
       enum: tunisianGovernorates,
       required: true,
     },
+
+    // Professional profile fields
+    specialty: {
+      type: String,
+      default: '',
+      trim: true,
+    },
+    price: {
+      type: Number,
+      default: 0,
+    },
+    verificationStatus: {
+      type: String,
+      enum: ['NOT_VERIFIED', 'UNVERIFIED', 'BASIC_VERIFIED', 'REJECTED'],
+      default: 'NOT_VERIFIED',
+    },
+    detectedRole: {
+      type: String,
+      default: '',
+      trim: true,
+    },
+
     isVerified: {
       type: Boolean,
       default: false,
